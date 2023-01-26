@@ -1,0 +1,22 @@
+<h1>Comisión: {{comision}}</h1>
+<div>
+    <h2>Listado de alumnos</h2>
+    <ul class="listado-alumnos">
+        <li *ngFor="let estudiante  of listaEstudiantes" [ngClass]="estudiante.isActive ? '': 'estudiante-inactivo'">{{estudiante.apellido}}, {{estudiante.nombre}}</li>
+    </ul>
+</div>
+
+<div>
+    <h2>Listado de alumnos regulares</h2>
+    <ul *ngIf="listaEstudiantes.length === 0">
+        <li>
+            Curso sin Estudiantes
+        </li>
+    </ul>
+    <ul *ngIf="listaEstudiantes.length > 0">
+        
+        <li *ngFor="let estudiante  of listaEstudiantes" [ngClass]="estudiante.isActive ? '': 'invisible'">
+            {{estudiante.apellido}}, {{estudiante.nombre}}
+        </li>
+    </ul>
+</div>

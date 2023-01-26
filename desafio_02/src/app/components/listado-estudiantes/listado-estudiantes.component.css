@@ -1,0 +1,11 @@
+.estudiante-inactivo{
+    background-color: rgba(224, 118, 118, 0.772);
+}
+
+.invisible{
+    display: none;    
+}
+
+.listado-alumnos{
+    width: fit-content;
+}
